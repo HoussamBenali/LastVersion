@@ -5,7 +5,7 @@
         </div>
     <div class="containerRoot">
 
-        <form @submit.prevent="Register">
+        <form @submit.prevent="Register"  class="form">
             <h2><b>Register</b></h2>
             <hr>
             <div class="form-group">
@@ -44,8 +44,6 @@
                 type="submit"
                 class="">Enviar
             </button>
-            <hr>
-        
             <hr>
             <div class="container">
                 <label class="psw">

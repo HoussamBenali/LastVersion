@@ -3,7 +3,7 @@
 <body>
 <div id="ChangeForm">
 	<div class="container0">
-  	 <form @submit.prevent="changeNick">
+  	 <form @submit.prevent="changeNick" class="form">
         <div v-if="message.length > 0" class="alert alert-danger" role="alert">
             {{ message }}
         </div>
@@ -19,7 +19,7 @@
         </form>
 	</div>
  	<div class="newUser">
-        <form @submit.prevent="changeEmail" >
+        <form @submit.prevent="changeEmail" class="form" >
         <div v-if="emessage.length > 0" class="alert alert-danger" role="alert">
             {{ emessage }}
         </div>
@@ -113,19 +113,6 @@ export default {
                  
         return store.dispatch('getUser')
        
-        },
-
-        getAvatar(nombre) {
-            var imagen = "";
-            axios
-                .get("/avatar/" + nombre)
-                .then(function(response) {
-                    imagen = response.data;
-                })
-                .catch(function(error) {
-                    fail(error);
-                });
-            return imagen;
         },
         async getNick(){
             const res=await axios.get('/api/user')

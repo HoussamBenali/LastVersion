@@ -162,16 +162,10 @@ class UserController extends Controller{
         $ids=[];
         // dd($total,$pokes_id);
         for ($x=0; $x<count($pokes_id); $x++){
-            // dd($pokes_id[$x]["id"]);
-            array_push($ids, $pokes_id[$x]["id"]);
+            array_push($ids, strval($pokes_id[$x]["id"]));
         }
         // dd($ids);
 
-        
-        
-        
-
-        
         $id=\Auth::user()->id;
         $user=User::where('id',$id)->first();
 

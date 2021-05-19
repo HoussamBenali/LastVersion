@@ -105,7 +105,7 @@ export default {
                     return  {"background-image": "linear-gradient(to top left, white, #009933 , white )"}
                 }
                 else if (this.Rarity=="superrare"){
-                    return  {"background-image": "linear-gradient(to top left, white, #blue , white )"}
+                    return  {"background-image": "linear-gradient(to top left, white, blue , white )"}
                 }
                 else if (this.Rarity=="unique"){
                      return  {"background-image": "linear-gradient(to top left, white, #cc00cc, white )"}

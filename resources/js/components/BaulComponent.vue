@@ -63,11 +63,12 @@ export default {
    
         async comprar () {
             var pokes = cart.state.pokemons_cart
+            console.log(pokes, 'poke comprado en string')
             //console.log(this.total_cart)
             // console.log("comprar",this.pokemons_cart)
             //console.log(pokes)
             // console.log(pokes[x].id)
-            await axios.post('api/user/savePoke',{
+            await axios.post('/api/user/savePoke',{
                 pokes_id:pokes,
                 price_total:this.total_cart
             })
