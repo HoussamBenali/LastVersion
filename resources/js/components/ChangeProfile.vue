@@ -3,7 +3,11 @@
 <body>
 <div id="ChangeForm">
 	<div class="container0">
+<<<<<<< HEAD
   	 <form class="form" @submit.prevent="changeNick">
+=======
+  	 <form @submit.prevent="changeNick" class="form">
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
         <div v-if="message.length > 0" class="alert alert-danger" role="alert">
             {{ message }}
         </div>
@@ -19,7 +23,11 @@
         </form>
 	</div>
  	<div class="newUser">
+<<<<<<< HEAD
         <form class="form" @submit.prevent="changeEmail" >
+=======
+        <form @submit.prevent="changeEmail" class="form" >
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
         <div v-if="emessage.length > 0" class="alert alert-danger" role="alert">
             {{ emessage }}
         </div>
@@ -113,19 +121,6 @@ export default {
                  
         return store.dispatch('getUser')
        
-        },
-
-        getAvatar(nombre) {
-            var imagen = "";
-            axios
-                .get("/avatar/" + nombre)
-                .then(function(response) {
-                    imagen = response.data;
-                })
-                .catch(function(error) {
-                    fail(error);
-                });
-            return imagen;
         },
         async getNick(){
             const res=await axios.get('/api/user')

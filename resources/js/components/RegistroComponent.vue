@@ -5,7 +5,11 @@
         </div>
     <div class="containerRoot">
 
+<<<<<<< HEAD
         <form class="form" @submit.prevent="Register">
+=======
+        <form @submit.prevent="Register"  class="form">
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
             <h2><b>Register</b></h2>
             <hr>
             <div class="form-group">
@@ -45,7 +49,10 @@
                 class="">Enviar
             </button>
             <hr>
+<<<<<<< HEAD
         
+=======
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
             <div class="container">
                 <label class="psw">
                     <span>Already have an account? <router-link to="login">Sign in</router-link></span>

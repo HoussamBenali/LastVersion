@@ -32,6 +32,11 @@
 
 <script>
 import $ from 'jquery'
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
 export default {
     data() {
         return {
@@ -44,6 +49,10 @@ export default {
             }
         };
     },
+<<<<<<< HEAD
+=======
+
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
     methods: {
         uploadImage(e){
             //console.log(e.target.files[0],'hi');
@@ -71,6 +80,10 @@ export default {
             this.$router.go('changeAvatar');
         },
     },
+<<<<<<< HEAD
+=======
+
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
 };
 </script>
 <style scoped>
@@ -81,6 +94,10 @@ export default {
     justify-content: center;
     word-wrap: break-word;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
 .subcontainer{
 	margin-top: 0;
 	display: flex;
@@ -96,17 +113,25 @@ export default {
  
 img{
     margin: 20px;
+<<<<<<< HEAD
 }
+=======
+
+}
+
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
 .cuadro_perfil {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .izquierda {
     margin: 0!important;
     padding: 0!important;
     /*background-color:  #85c1e9;*/
 }
+
 .change {
     margin-bottom: 5vh;
     color: black;
@@ -114,9 +139,17 @@ img{
     width: 100%;
     text-decoration: underline;
 }
+<<<<<<< HEAD
 .underline{
     text-decoration: underline;
 }
+=======
+
+.underline{
+    text-decoration: underline;
+}
+
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
 .bloque{
     text-align: center;
     border:solid 3px black;
@@ -129,6 +162,12 @@ img{
     width:40%;
     background-color: white;
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
 button {
 	background-color: #4CAF50;
 	border-radius: 1vh;
@@ -143,4 +182,8 @@ button {
   button:hover {
 	opacity: 0.8;
   }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a

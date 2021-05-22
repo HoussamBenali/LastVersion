@@ -1,7 +1,11 @@
 <template>
 <div id="reset">
   <div class="container0">
+<<<<<<< HEAD
     <form class="form" @submit.prevent="Reset">
+=======
+    <form @submit.prevent="Reset"  class="form">
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
         <h2><b>Reset</b></h2>
         <hr>
         <div class="form-group">

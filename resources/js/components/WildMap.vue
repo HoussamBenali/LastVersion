@@ -106,6 +106,10 @@ export default {
         opmaxedHP:false,
         opmaxedATK:false,
         opmaxedDEF:false,
+<<<<<<< HEAD
+=======
+        pokes: [],
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
         wins:false,
         //maxedSPD:false,
 
@@ -206,7 +210,7 @@ changedCard(num){
 
 }, 
           
-faintAnimation: function(){
+async faintAnimation(){
   this.attacks = false
   this.options = false
 
@@ -217,14 +221,27 @@ faintAnimation: function(){
       this.setRewards(this.opponent.poke.id,this.player.current.id)
   } else if (this.opponent.cards==0){
         this.wins = true
+<<<<<<< HEAD
         this.matchEnded = true; 
         this.setRewards(this.opponent.poke.id, this.player.current.id)
         console.log(this.coins)
         if (this.droppedPokemon != null){
            setTimeout(() => {this.battleText = "You have won "+this.coins+" PokeCoins and obtained "+this.opponent.poke.name},2000)
         }
+=======
+        this.matchEnded = true;  
+        const res = await axios.get('../api/pokesUser')
+        this.pokes=res.data
+        this.setRewards(this.opponent.poke.id)  
+        
+        if (this.droppedPokemon == null || this.pokes.includes(this.opponent.poke.id.toString())==true){
+            setTimeout(() => {this.battleText = "You have won "+this.coins+" PokeCoins"},2000)
+            //console.log('if', this.pokes)
+       }
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
         else{
-           setTimeout(() => {this.battleText = "You have won "+this.coins+" PokeCoins"},2000)
+           //console.log('else', this.pokes)
+           setTimeout(() => {this.battleText = "You have won "+this.coins+" PokeCoins and obtained "+this.opponent.poke.name},2000)
         }      
       setTimeout(() => { this.$router.push('../adventure')},4000)
   }
@@ -246,7 +263,7 @@ async setRewards(op_id, player_id){
       this.droppedPokemon=op_id.toString()
   
     }
-    console.log(this.opponent.poke)
+
     if (this.opponent.poke.rarity=="common"){
         this.coins=250
     } else if ( this.opponent.poke.rarity=="rare"){
@@ -259,6 +276,7 @@ async setRewards(op_id, player_id){
 
     console.log(this.coins, 'coins')
     console.log(this.droppedPokemon, 'dropped')
+<<<<<<< HEAD
     if (this.droppedPokemon==null){
       console.log('only coins')
            await axios.post('../api/setRewards', {
@@ -273,15 +291,27 @@ async setRewards(op_id, player_id){
             wins: 1
         })
       }
+=======
+    await axios.post('../api/setRewards', {
+        coins: this.coins,
+        droppedPokemon: this.droppedPokemon,
+        wins: 1
+    })
+      
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
     }
     else{
       console.log("LOSS")
       const info = await axios.post('../api/setRewards', {
           coins: 100,
+<<<<<<< HEAD
           wins: 0,
           poke_player: player_id,
           poke_op: op_id
           // droppedPokemon: this.droppedPokemon
+=======
+          wins: 0
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
       })
     }
   
@@ -438,7 +468,11 @@ opponentAttack(){
              
              if (opponentSkill=="ATK" && this.opmaxedATK || opponentSkill=="DEF" && this.opmaxedDEF || opponentSkill=="HP" && this.opmaxedHP ){
                   this.battleText = this.opponent.poke.name + " used " + this.opponent.poke.moves[random-1].name + "!"
+<<<<<<< HEAD
                   setTimeout(() => {this.battleText = this.opponent.poke.name + " can't increase his "+ opponentSkill+"anymore!"}, 2000)
+=======
+                  setTimeout(() => {this.battleText = this.opponent.poke.name + " can't increase his "+ opponentSkill+" anymore!"}, 2000)
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
                   setTimeout(() => { this.options = true, this.disabledOptions = false},4000)
                   setTimeout(() => {this.battleText = "What will " + this.player.current.name + " do?"},4000)  
               } else{

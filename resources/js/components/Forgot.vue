@@ -1,7 +1,11 @@
 <template>
 <div id="forgot">
       <div class="container0">
+<<<<<<< HEAD
         <form class="form" @submit.prevent="Forgot">
+=======
+        <form @submit.prevent="Forgot" class="form">
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
           <div class="messageOrerror">
             <div v-if="message" class="alert alert-success" role="alert">
               {{message}}

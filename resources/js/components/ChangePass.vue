@@ -27,7 +27,6 @@
             <button
                 :disabled="!formValidate"
                 type="submit"
-                class="btn btn-primary"
             >
                 Enviar
             </button>
@@ -36,7 +35,7 @@
     </div>
 </template>
 <script>
-import { required, minLength, sameAs, email } from "vuelidate/lib/validators";
+import { required, minLength, sameAs } from "vuelidate/lib/validators";
 import BaseInput from "./BaseInput.vue";
 
 export default {
@@ -46,8 +45,6 @@ export default {
             message:'',
             error:'',
             form: {
-                nick: "",
-                email: "",
                 password: "",
                 rpassword: "",
                 opassword: ""
@@ -166,4 +163,6 @@ h2{
   .mybtn{
 	margin-bottom: 0;
   }
+
+  
 </style>

@@ -2,7 +2,11 @@
 <body>
 <div id="LoginForm">
     <div class="container0">
+<<<<<<< HEAD
       <form class="form" @submit.prevent="login">
+=======
+      <form @submit.prevent="login" class="form">
+>>>>>>> 889a5aeb852ccad9a961e7a68021eb3e9da9135a
           <div v-if="credentials.length > 0" class="alert alert-warning" role="alert">
               {{credentials}}
           </div>
